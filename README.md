@@ -26,3 +26,18 @@ API RESTful desenvolvida em Java com Spring Boot para o gerenciamento de corrent
    ```bash
    git clone [https://github.com/victormaximinodesouza/desafio-pactomais.git](https://github.com/victormaximinodesouza/desafio-pactomais.git)
    cd desafio-pactomais****
+
+* ** Testes de Endpoints: Correntistas
+Cadastrar Correntista (POST /api/correntistas)
+
+Exemplo de JSON (Body):
+
+JSON
+{
+  "nome": "Victor Maximino",
+  "documento": "12345678900",
+  "contato": "victor@email.com"
+}
+Listar Correntistas (GET /api/correntistas)
+
+Retorna a lista de todos os correntistas registados. **
