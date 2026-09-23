@@ -46,15 +46,7 @@ git clone https://github.com/victormaximinodesouza/desafio-pactomais.git
 cd desafio-pactomais
 ```
 
-### 2. Configure o banco
-
-Crie o banco no MySQL:
-
-```sql
-CREATE DATABASE pacto_mais;
-```
-
-Configure o arquivo:
+### 2. Configure o arquivo:
 
 ```text
 src/main/resources/application.properties
