@@ -1,43 +1,130 @@
-# Conta Bancária - API RESTful para Cooperativa de Crédito
+# 🏦 Conta Bancária API
 
-API RESTful desenvolvida em Java com Spring Boot para o gerenciamento de correntistas, contas bancárias (Conta Corrente e Conta Poupança) e operações financeiras.
+API REST desenvolvida em **Java 17 e Spring Boot 3** para gerenciamento de correntistas e contas bancárias.
 
----
+Projeto desenvolvido com foco em prática de **Java, Spring Boot, APIs REST, JPA e banco de dados**.
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-* **Linguagem:** Java 17
-* **Framework:** Spring Boot 3
-* **Persistência:** Spring Data JPA / Hibernate
-* **Banco de Dados:** MySQL
-* **Gerenciador de Dependências:** Maven
+* Java 17
+* Spring Boot 3
+* Spring Data JPA
+* Hibernate
+* MySQL
+* Maven
+* Postman
 
----
+## 📂 Estrutura do Projeto
 
-## 🚀 Como Executar o Projeto Localmente
+```text
+src/main/java
+├── controller
+├── service
+├── repository
+├── entity
+├── dto
+└── exception
+```
 
-### Pré-requisitos
-* Java 17 (ou superior) instalado
-* Maven instalado
-* Servidor MySQL em execução na porta `3306`
+## ⚙️ Funcionalidades
 
-### Passos
-1. **Clonar o repositório:**
-   ```bash
-   git clone [https://github.com/victormaximinodesouza/desafio-pactomais.git](https://github.com/victormaximinodesouza/desafio-pactomais.git)
-   cd desafio-pactomais****
+* Cadastro de correntistas
+* Listagem de correntistas
+* Modelagem de contas bancárias
+* Conta Corrente e Conta Poupança
+* Relacionamento entre correntistas e contas
+* Validação de dados
+* Tratamento de exceções
+* Persistência no MySQL
 
-* ** Testes de Endpoints: Correntistas
-Cadastrar Correntista (POST /api/correntistas)
+## 🚀 Como executar
 
-Exemplo de JSON (Body):
+### 1. Clone o projeto
 
-JSON
+```bash
+git clone https://github.com/victormaximinodesouza/desafio-pactomais.git
+cd desafio-pactomais
+```
+
+### 2. Configure o banco
+
+Crie o banco no MySQL:
+
+```sql
+CREATE DATABASE pacto_mais;
+```
+
+Configure o arquivo:
+
+```text
+src/main/resources/application.properties
+```
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/pacto_mais?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=sua_senha
+
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### 3. Execute a aplicação
+
+Execute a classe:
+
+```text
+DesafioPactoMaisApplication.java
+```
+
+A API estará disponível em:
+
+```text
+http://localhost:8080
+```
+
+## 📌 Endpoints
+
+### Correntistas
+
+**POST** `/api/correntistas`
+
+```json
 {
   "nome": "Victor Maximino",
   "documento": "12345678900",
   "contato": "victor@email.com"
 }
-Listar Correntistas (GET /api/correntistas)
+```
 
-Retorna a lista de todos os correntistas registados. **
+**GET** `/api/correntistas`
+
+Retorna todos os correntistas cadastrados.
+
+## 🧠 Conceitos praticados
+
+* Programação Orientada a Objetos
+* Herança e abstração
+* API REST
+* Spring Boot
+* JPA/Hibernate
+* Relacionamentos entre entidades
+* Arquitetura em camadas
+* DTOs
+* Tratamento de exceções
+* MySQL
+
+## 🧪 Testes
+
+Os endpoints foram testados utilizando **Postman**.
+
+## 🔜 Próximos passos
+
+* [ ] Depósito e saque
+* [ ] Transferências
+* [ ] Histórico de transações
+* [ ] Swagger/OpenAPI
+* [ ] Testes com JUnit e Mockito
+* [ ] Spring Security + JWT
+* [ ] Deploy na AWS(EC2)
+* [ ] Banco de dados MySQL utilizando AWS RDS
+
