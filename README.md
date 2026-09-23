@@ -46,7 +46,15 @@ git clone https://github.com/victormaximinodesouza/desafio-pactomais.git
 cd desafio-pactomais
 ```
 
-### 2. Configure o arquivo:
+### 2. Configure o banco
+
+Crie o banco no MySQL:
+
+```sql
+CREATE DATABASE pacto_mais;
+```
+
+Configure o arquivo:
 
 ```text
 src/main/resources/application.properties
@@ -109,14 +117,12 @@ Retorna todos os correntistas cadastrados.
 
 Os endpoints foram testados utilizando **Postman**.
 
+
 ## 🔜 Próximos passos
 
-* [ ] Depósito e saque
-* [ ] Transferências
-* [ ] Histórico de transações
-* [ ] Swagger/OpenAPI
-* [ ] Testes com JUnit e Mockito
-* [ ] Spring Security + JWT
-* [ ] Deploy na AWS(EC2)
-* [ ] Banco de dados MySQL utilizando AWS RDS
-
+- [ ] Implementar operações financeiras
+- [ ] Swagger/OpenAPI
+- [ ] Testes com JUnit e Mockito
+- [ ] Docker
+- [ ] Deploy na AWS (EC2)
+- [ ] Banco de dados MySQL utilizando Amazon RDS
